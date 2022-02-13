@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LogicalProgrammes
 {
-    internal class PrimeNumber
+    internal class ReverseAnumber
     {
         public static void Fib()
         {
@@ -65,6 +65,20 @@ namespace LogicalProgrammes
             }
             if (flag == 0)
                 Console.Write("Number is Prime.");
+        }
+
+        public static void Reverse()
+        {
+            int num, rev = 0, rem;
+            Console.Write("Enter a number: ");
+            num = int.Parse(Console.ReadLine());
+            while (num != 0)
+            {
+                rem = num % 10;
+                rev = rev * 10 + rem;
+                num /= 10;
+            }
+            Console.Write("Reversed Number: " + rev);
         }
 
     }
