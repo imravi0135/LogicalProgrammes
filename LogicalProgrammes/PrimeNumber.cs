@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LogicalProgrammes
 {
-    internal class PerfectNumber
+    internal class PrimeNumber
     {
         public static void Fib()
         {
@@ -48,7 +48,24 @@ namespace LogicalProgrammes
             }
         }
 
-
+        public static void Prime()
+        {
+            int n, i, m = 0, flag = 0;
+            Console.Write("Enter the number to check : ");
+            n = int.Parse(Console.ReadLine());
+            m = n / 2;
+            for (i = 2; i <= m; i++)
+            {
+                if (n % i == 0)
+                {
+                    Console.Write("Number is not Prime.");
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag == 0)
+                Console.Write("Number is Prime.");
+        }
 
     }
 }
